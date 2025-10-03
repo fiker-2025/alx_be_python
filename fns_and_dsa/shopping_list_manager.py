@@ -12,7 +12,7 @@ def main():
         choice = input("Enter your choice: ").strip()
 
         if choice == '1':
-            item = input("Enter item to add: ").strip()
+            item = input("Enter the item to add: ").strip()
             if item:
                 shopping_list.append(item)
                 print(f"'{item}' added to the shopping list.")
@@ -20,7 +20,7 @@ def main():
                 print("No item entered. Try again.")
 
         elif choice == '2':
-            item = input("Enter item to remove: ").strip()
+            item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"'{item}' removed from the shopping list.")
@@ -29,7 +29,7 @@ def main():
 
         elif choice == '3':
             if shopping_list:
-                print("\nCurrent Shopping List:")
+                print("Current Shopping List:")
                 for idx, item in enumerate(shopping_list, start=1):
                     print(f"{idx}. {item}")
             else:
